@@ -22,10 +22,6 @@ img {
   width: 100%;
 }
 
-.logo {
-  width: 10rem;
-}
-
 .banner {
   display: flex;
   padding: 2rem;
@@ -76,10 +72,42 @@ ul {
 }
 
 section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 1fr .25fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+}
+
+a:nth-child(odd) {
+  grid-column: 3 / 4;
+}
+
+a:nth-child(even) {
+  grid-column: 1 / 2;
+}
+
+a:nth-child(1) {
+  grid-row: 1 / 2;
+}
+
+a:nth-child(2) {
+  grid-row: 2 / 3;
+}
+
+a:nth-child(3) {
+  grid-row: 3 / 4;
+}
+
+a:nth-child(4) {
+  grid-row: 4 / 5;
+}
+
+a:nth-child(5) {
+  grid-row: 5 / 6;
+}
+
+a:nth-child(6) {
+  grid-row: 6 / 7;
 }
 
 h2 {
@@ -94,14 +122,14 @@ h2 {
 
 .hover-box h2 {
   position: absolute;
-  bottom: -4em;
+  bottom: -7em;
   width: 100%;
-  padding: 1rem;
+  padding: 7rem;
   margin: 0;
   text-align: center;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.5););
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.5));
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
-  transition: all .2s linear;
+  transition: all .3s linear;
 }
 
 .hover-box:hover h2,
@@ -111,7 +139,7 @@ h2 {
 
 .hover-box img {
   filter: grayscale(100%);
-  transition: all .2s linear;
+  transition: all .3s linear;
 }
 
 .hover-box:hover img,
