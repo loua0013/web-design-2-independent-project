@@ -1,9 +1,9 @@
 html {
   box-sizing: border-box;
-  -webkit-text-size-adjust: 100%;
+  webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
-  font-family: Lora, serif;
-  line-height: 1.5;
+  font-family: Quicksand, sans-serif;
+  line-height: 1.2;
 }
 
 *,
@@ -14,7 +14,7 @@ html {
 
 body {
   margin: 0;
-  padding: 2rem;
+  background-color: #f9f1f1;
 }
 
 img {
@@ -22,26 +22,45 @@ img {
   width: 100%;
 }
 
-.banner {
-  display: flex;
-  padding: 2rem;
-  justify-content: space-between;
+.logo {
+  height: 100%;
+  padding: 4rem;
+  padding-bottom: 0;
+}
+
+.divbanner {
+  background-color: #C4A589;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 1fr;
+  align-content: flex-end;
+  margin: 0;
 }
 
 nav ul {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   list-style: none;
 }
 
 nav li {
-padding: 1rem;
-font-weight: 500;
+  padding: 1rem;
+  font-weight: 500;
+}
+
+.nav {
+  margin-right: 10rem;
+  margin-bottom: 0;
 }
 
 h3 {
-  font-size: 1rem;
-  width: 7rem;
+  padding: 3rem;
+  font-size: 1.75rem;
+  color: #fff;
+}
+
+h3:hover {
+  color: #000;
 }
 
 a {
@@ -49,13 +68,45 @@ a {
   color: #000;
 }
 
-h1 {
-  font-family: "Abril Fatface", serif;
+.whitecircle {
+  width: 18rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
-display: block;
-margin-left: auto;
-margin-right: auto;
-padding-top: 5rem;
+  padding-top: 5rem;
+}
+
+.eyeball {
+  transform: rotate(0deg);
+  transition-delay: 1s;
+  transition: all 3s ease;
+}
+
+.eyeball:hover {
+  transform: rotate(45deg);
+  transition-delay: 1s;
+  transition: all 1s ease;
+}
+
+.whitecircle{
+  transform: translate(0, 0px);
+  transition: all .5s ease;
+}
+
+
+.whitecircle:hover {
+  transform: translate(0, -20px);
+  transition: all .5s ease;
+}
+
+h1 {
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .description {
@@ -63,8 +114,19 @@ padding-top: 5rem;
 display: block;
 margin-left: auto;
 margin-right: auto;
-  padding-bottom: 7rem;
+  padding-bottom: 0;
   max-width: 40rem;
+  font-size: 2rem;
+}
+
+.seconddescription {
+  text-align: center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+  padding-bottom: 0;
+  max-width: 40rem;
+  font-size: 2rem;
 }
 
 ul {
@@ -73,45 +135,18 @@ ul {
 
 section {
   display: grid;
-  grid-template-columns: 1fr .25fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   align-items: center;
-}
-
-a:nth-child(odd) {
-  grid-column: 3 / 4;
-}
-
-a:nth-child(even) {
-  grid-column: 1 / 2;
-}
-
-a:nth-child(1) {
-  grid-row: 1 / 2;
-}
-
-a:nth-child(2) {
-  grid-row: 2 / 3;
-}
-
-a:nth-child(3) {
-  grid-row: 3 / 4;
-}
-
-a:nth-child(4) {
-  grid-row: 4 / 5;
-}
-
-a:nth-child(5) {
-  grid-row: 5 / 6;
-}
-
-a:nth-child(6) {
-  grid-row: 6 / 7;
+  grid-gap: 3%;
+  margin: 5rem;
 }
 
 h2 {
   text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+  background-color: #000;
 }
 
 .hover-box {
@@ -122,13 +157,11 @@ h2 {
 
 .hover-box h2 {
   position: absolute;
-  bottom: -7em;
+  bottom: -10em;
   width: 100%;
-  padding: 7rem;
+  padding: 1rem;
   margin: 0;
   text-align: center;
-  background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 0.5));
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9);
   transition: all .3s linear;
 }
 
@@ -138,12 +171,32 @@ h2 {
 }
 
 .hover-box img {
-  filter: grayscale(100%);
+  filter: grayscale(0);
   transition: all .3s linear;
 }
 
 .hover-box:hover img,
 .hover-box:focus img {
-  filter: grayscale(0);
-  transform: scale(1.1)
+  filter: grayscale(100%);
+  transform: scale(1.1);
+}
+
+.card {
+  box-shadow: -6px 8px 6px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 10%;
+}
+
+.footer {
+  background-color: #C4A589;
+  display: grid;
+  grid-template-columns: 15rem 1fr;
+  grid-template-rows: 1fr;
+  align-content: flex-end;
+  margin: 0;
+  align-content: center;
+}
+
+small {
+  padding: 2rem;
+  display: block;
 }
